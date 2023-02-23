@@ -1,4 +1,4 @@
-﻿CREATE TABLE Products (
+CREATE TABLE Products (
 	Id INT PRIMARY KEY,
 	"Name" TEXT
 );
