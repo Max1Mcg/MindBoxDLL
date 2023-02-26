@@ -8,6 +8,12 @@ namespace MindBoxDLL.Figure
 {
     public static class Area
     {
+        /// <summary>
+        /// Static method for get area for any inheriting from Figure by using reflection
+        /// </summary>
+        /// <param name="o">Object of class</param>
+        /// <returns>area</returns>
+        /// <exception cref="InvalidCastException"></exception>
         public static double GetArea(Object o)
         {
             if (o is Circle c)

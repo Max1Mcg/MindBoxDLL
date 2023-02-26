@@ -20,10 +20,19 @@ namespace MindBoxDLL.Figure
             Sides = sides;
             FormulaForArea = formulaForArea;
         }
+        /// <summary>
+        /// Method for check correct values of sides
+        /// </summary>
+        /// <param name="a">Massive of sides</param>
+        /// <returns>Correct or not</returns>
         public override bool CheckSides(params double[] a)
         {
             return a.Where(e => e < 0).Count() == 0;
         }
+        /// <summary>
+        /// Method for get area of TherFigure
+        /// </summary>
+        /// <returns>Area</returns>
         public override double GetArea()
         {
             DataTable dt = new DataTable();
@@ -39,6 +48,10 @@ namespace MindBoxDLL.Figure
             var v = dt.Compute(tempFormula, "");
             return Convert.ToDouble(v);
         }
+        /// <summary>
+        /// Override method ToString from Object
+        /// </summary>
+        /// <returns>Triangle as String</returns>
         public override string ToString()
         {
             var sb = new StringBuilder($"Name = {Name} ");
@@ -48,6 +61,11 @@ namespace MindBoxDLL.Figure
             }
             return sb.ToString();
         }
+        /// <summary>
+        /// Override method Equals from Object
+        /// </summary>
+        /// <param name="obj">Object to comparison</param>
+        /// <returns>Two objects are equals or not</returns>
         public override bool Equals(object obj)
         {
             if (obj == null || obj.GetType() != this.GetType())
