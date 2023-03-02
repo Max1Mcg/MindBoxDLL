@@ -3,23 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MindBoxDLL.Check;
+using MindBoxDLL;
 
-namespace MindBoxDLL.Figure
+namespace MindBoxDLL
 {
     public abstract class Figure: ICheckSides
     {
+        //Свойство Name нужно для задания имени для нового типа фигуры(задание 1.1)
         public string Name { get; set; }
-        /// <summary>
-        /// abstract method from ICheckSides
-        /// </summary>
-        /// <param name="a">massive of sides</param>
-        /// <returns>correct or not</returns>
+        //Данный метод проверяет корректность сторон для заранее неизвестного числа параметров,
+        //(тоже для задания 1.1)
         public abstract bool CheckSides(params double[] a);
-        /// <summary>
-        /// abstract method for get area
-        /// </summary>
-        /// <returns>area of figure</returns>
         public abstract double GetArea();
     }
 }

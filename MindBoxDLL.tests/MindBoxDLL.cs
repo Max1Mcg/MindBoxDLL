@@ -1,5 +1,4 @@
-using MindBoxDLL.Figure;
-using MindBoxDLL.Check;
+using MindBoxDLL;
 using Xunit.Sdk;
 
 namespace MindBoxDLL.Tests 
