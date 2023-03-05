@@ -6,15 +6,11 @@ using System.Threading.Tasks;
 
 namespace MindBoxDLL
 {
-    //Статический класс для вычисления фигуры, без знания её типа(точнее тип будет Object,
-    //объект которого является производным от Figure или нет)
+    //Статический класс для вычисления фигуры, без знания её типа
+    //В switch-конструкции описаны классы Circle и Triangle, если площадь нужно вычислить
+    //для круга или треугольника, default вычисляет площадь для OtherFigure.
     public static class Area
     {
-        static readonly System.Collections.Generic.Dictionary<string, Type> d = null;
-        static Area()
-        {
-            d = new System.Collections.Generic.Dictionary<string, Type>() { { "Circle", typeof(Circle)}, { "Triangle", typeof(Triangle)}, {"OtherFigure", typeof(OtherFigure)} };
-        }
         public static double GetArea(string name, List<double>sides, string formulaForArea = "")
         {
             Figure figure = null;
